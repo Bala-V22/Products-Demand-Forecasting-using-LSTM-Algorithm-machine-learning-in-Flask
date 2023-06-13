@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demand Forcasting</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background-color: black;
+            background-image: url('back.jpg');
+            /* background-image: url('static/back.jpg'); */
+            background-repeat: no-repeat;
+            background-size: 37cm;
+        }
+
+        select{
+            width: 350px;
+            height: 50px;
+            border-radius: 20px;
+            font-weight: bold;
+            border-style: groove;
+            border:2px solid #0abde3;
+            outline: none;
+            /* margin-left: 60%; */
+            /* margin-top: 5%; */
+            transition: 0.4s;
+        }
+
+        select:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 #18dcff;
+        }
+
+        select:hover{
+            transform: scale(110%);
+            background-color: transparent;
+            color: white;
+        }
+
+        
+
+        option{
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            color: #B33771;
+        }
+
+        img{
+            width: 600px;
+            height: 450px;
+            margin: 3% 0% 0% 50%;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            margin-left: 45%;
+            align-items: center;
+            margin-top: 3%;
+        }
+
+        button{
+            width: 170px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #25CCF7;
+            color: white;
+            transition: 0.4s ease-in;
+            cursor: pointer;
+        }
+
+        button:hover{
+            transform: scale(115%);
+            background-color: transparent;
+            border: 2px solid aqua;
+            border-style: double;
+        }
+    </style>
+</head>
+<body style="background-image: url('static/back.jpg');">
+<form action="predict" method="post">
+    <div class="titel">
+        <h2 style="color: white; font-weight: bolder; font-size: 1.3cm; position: absolute; top: -4%;">Product Demand Forecasting</h2>
+    </div>
+    <div class="content">
+    <select name="Product" id="">
+        <option value="">Select Catagory</option>
+        <option value="Category_028">Mobiles</option>
+        <option value="Category_019">Bluetooth Headset</option>
+        <option value="Category_006">Sofa</option>
+        <option value="Category_005">Washing Machine</option>
+        <option value="Category_032">Head set</option>
+        <option value="Category_011">Bluetooth Headset</option>
+        <option value="Category_001">TV</option>
+        <option value="Category_026">Watch</option> 
+        <option value="Category_006">Bicycle</option> 
+        <option value="Category_007">Shoes</option> 
+        <option value="Category_021">Bookcases</option> 
+        <option value="Category_022">Dress</option> 
+    </select>
+    <br>
+    <button type="submit">
+        Predict Demand
+    </button>
+</div>
+</form>
+<!-- {% if path %}
+    <div class="out">
+        <img src="{{path}}" alt="">
+    </div>
+
+    {% endif %} -->
+</body>
+</html>
